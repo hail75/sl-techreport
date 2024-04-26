@@ -754,6 +754,10 @@ class SwinTransformer3D(BaseModule):
             ]``.
     """
     arch_zoo = {
+        **dict.fromkeys(['st', 'supertiny'],
+                        {'embed_dims': 64,
+                         'depths': [2, 2, 3, 2],
+                         'num_heads': [2, 4, 8, 16]}),
         **dict.fromkeys(['t', 'tiny'],
                         {'embed_dims': 96,
                          'depths': [2, 2, 6, 2],
